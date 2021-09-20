@@ -4,22 +4,42 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Evgeni Bochkov</title>
+
   </head>
 
-  <body>
-    <section class="hero-image">
-   	 	<div class="container">
-      		<h1 class="heading">Evgeni Bochkov</h1>
-			<p>Junior Frontend Developer</p>
-			<figure class="user-image">
-				<img src="files/avatar.jpg" width="300"  alt="Evgeni Bochkov">
-			</figure>
-    	</div>
-    </section>
+  	<body>
+	  	<header>
+		<section class="hero-image">
+			<div class="container">
+				<h1 class="heading">Evgeni Bochkov</h1>
+				<p>Junior Frontend Developer</p>
+
+				<figure class="user-image">
+					<img src="files/avatar.jpg" width="300"  alt="Evgeni Bochkov">
+				</figure>
+			</div>
+		</section>
+		</header>
+		<nav>
+		<div class="topnav" id="myTopnav">
+
+			<a href="#" class="active">Home</a>
+			<a href="#contacts">Contacts</a>
+			<a href="#summary">About Me</a>
+			<a href="#skills">Skills</a>
+			<a href="#code">Code example</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>				
+			</a>
+		</div>
+	  	</nav>
+
+	<main>
     <section class="intro">
    		<div class="container">
-			<div class="contacts container">
+			<div class="contacts container" id="contacts">
             <h3>Contacts</h3>
             <ul>
             	<li class="gmail"><a href="mailto:whitetheo1983@gmail.com">
@@ -32,16 +52,16 @@
               	</li>
             </ul>
           	</div>
-		<div class="summary container">
+		<div class="summary container" id="summary">
 			<h3>Summary</h3>
 			<p>I have no commercial development experience yet, but I have a very great desire to completely immerse myself in the world of front-end.<br>
 			Every day I try to devote 4-5 hours to training after the main work and 7-8 hours on weekends.</p>
 		</div>
-		<div class="skills container">
+		<div class="skills container" id="skills">
 				<h3>Skills</h3>
 				<p>Agile, Kanban and OKR methodologies, work in jira, Yandex Direct, Google Ads, Facebook Ads, Photoshop, Visual Studio Code.</p>
 		</div>
-		<div class="code-examples container">
+		<div class="code-examples container" id="code">
 			<h3>Code Examples</h3>
 			<p>
 				<code>
@@ -80,5 +100,35 @@
 		</div>
     	</div>
     </section>
+	</main>
+	<footer class="footer">
+		<a class="footer__github" href="https://github.com/whitetheo83">
+		  My GitHub
+		</a>
+		<p class="footer__year">2021</p>
+		<a class="footer__rsschool" href="https://rs.school/js/">
+		  <img src="https://rs.school/images/rs_school_js.svg" alt="RS School" width="100">
+		</a>
+	  </footer>
+	  <script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+			}
+	</script>
+	<script>
+$(function(){
+
+$('.some_link').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#some_point').offset().top }, 1000);
+  e.preventDefault();
+});
+
+});
+	</script>
   </body>
 </html>
